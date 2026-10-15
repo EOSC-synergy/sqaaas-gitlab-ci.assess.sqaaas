@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/sqaaas/sqaaas-gitlab-ci:
+      branch: main
+      repo: https://gitlab.com/sqaaas/sqaaas-gitlab-ci
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ice_peppy_mongoose.sh
+        container: qc.acc_eggplant_enigmatic_gnu
+  QC.Doc:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.fern_focused_crow.sh
+        container: qc.doc_wine_spirited_squirrel
+      gitlab.com/sqaaas/sqaaas-gitlab-ci git:
+        commands:
+        - /usr/bin/env sh .sqa/script.peach_proactive_wildcat.sh
+        container: qc.doc_glacier_curious_weasel
+      gitlab.com/sqaaas/sqaaas-gitlab-ci markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.indigo_eccentric_walrus.sh
+        container: qc.doc_pine_spontaneous_echidna
+  QC.Lic:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.watermelon_enigmatic_sparrow.sh
+        container: qc.lic_orchid_empathetic_coyote
+  QC.Sec:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.mango_unique_echidna.sh
+        container: qc.sec_espresso_vigilant_condor
+  QC.Sty:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.vermilion_philosophical_coyote.sh
+        container: qc.sty_cayenne_alert_bear
+  QC.Uni:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.kiwi_sweet_buffalo.sh
+        container: qc.uni_lapis_humble_manatee
+  QC.Ver:
+    repos:
+      gitlab.com/sqaaas/sqaaas-gitlab-ci get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sand_stoic_cassowary.sh
+        container: qc.ver_mango_devoted_octopus
+timeout: 5400
