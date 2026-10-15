@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci git:
         commands:
-        - /usr/bin/env sh .sqa/script.ice_peppy_mongoose.sh
-        container: qc.acc_eggplant_enigmatic_gnu
+        - /usr/bin/env sh .sqa/script.mango_brilliant_roadrunner.sh
+        container: qc.acc_aqua_mysterious_bear
   QC.Doc:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fern_focused_crow.sh
-        container: qc.doc_wine_spirited_squirrel
+        - /usr/bin/env sh .sqa/script.persimmon_open_finch.sh
+        container: qc.doc_cinnamon_open_ocelot
       gitlab.com/sqaaas/sqaaas-gitlab-ci git:
         commands:
-        - /usr/bin/env sh .sqa/script.peach_proactive_wildcat.sh
-        container: qc.doc_glacier_curious_weasel
+        - /usr/bin/env sh .sqa/script.emerald_nervous_thrush.sh
+        container: qc.doc_grape_sarcastic_hare
       gitlab.com/sqaaas/sqaaas-gitlab-ci markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.indigo_eccentric_walrus.sh
-        container: qc.doc_pine_spontaneous_echidna
+        - /usr/bin/env sh .sqa/script.sage_insightful_dhole.sh
+        container: qc.doc_persimmon_innocent_cobra
   QC.Lic:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.watermelon_enigmatic_sparrow.sh
-        container: qc.lic_orchid_empathetic_coyote
+        - /usr/bin/env sh .sqa/script.pink_devoted_rabbit.sh
+        container: qc.lic_puce_affectionate_eagle
   QC.Sec:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.mango_unique_echidna.sh
-        container: qc.sec_espresso_vigilant_condor
+        - /usr/bin/env sh .sqa/script.currant_eccentric_wolf.sh
+        container: qc.sec_steel_impulsive_turkey
   QC.Sty:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.vermilion_philosophical_coyote.sh
-        container: qc.sty_cayenne_alert_bear
+        - /usr/bin/env sh .sqa/script.aqua_generous_spren.sh
+        container: qc.sty_smoke_daring_macaw
   QC.Uni:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.kiwi_sweet_buffalo.sh
-        container: qc.uni_lapis_humble_manatee
+        - /usr/bin/env sh .sqa/script.raspberry_humble_iguana.sh
+        container: qc.uni_mahogany_timid_otter
   QC.Ver:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sand_stoic_cassowary.sh
-        container: qc.ver_mango_devoted_octopus
+        - /usr/bin/env sh .sqa/script.butter_productive_cassowary.sh
+        container: qc.ver_tundra_fierce_falcon
 timeout: 5400
