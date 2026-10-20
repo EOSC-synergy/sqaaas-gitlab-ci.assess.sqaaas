@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci git:
         commands:
-        - /usr/bin/env sh .sqa/script.mango_brilliant_roadrunner.sh
-        container: qc.acc_aqua_mysterious_bear
+        - /usr/bin/env sh .sqa/script.crimson_innocent_tiger.sh
+        container: qc.acc_wisteria_tranquil_osprey
   QC.Doc:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.persimmon_open_finch.sh
-        container: qc.doc_cinnamon_open_ocelot
+        - /usr/bin/env sh .sqa/script.taupe_stubborn_grizzly.sh
+        container: qc.doc_currant_confident_hippopotamus
       gitlab.com/sqaaas/sqaaas-gitlab-ci git:
         commands:
-        - /usr/bin/env sh .sqa/script.emerald_nervous_thrush.sh
-        container: qc.doc_grape_sarcastic_hare
+        - /usr/bin/env sh .sqa/script.strawberry_happy_turkey.sh
+        container: qc.doc_fern_tolerant_cassowary
       gitlab.com/sqaaas/sqaaas-gitlab-ci markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sage_insightful_dhole.sh
-        container: qc.doc_persimmon_innocent_cobra
+        - /usr/bin/env sh .sqa/script.wheat_visionary_gibbon.sh
+        container: qc.doc_amethyst_blissful_kiwi
   QC.Lic:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pink_devoted_rabbit.sh
-        container: qc.lic_puce_affectionate_eagle
+        - /usr/bin/env sh .sqa/script.dusk_sad_shark.sh
+        container: qc.lic_purple_flexible_goat
   QC.Sec:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.currant_eccentric_wolf.sh
-        container: qc.sec_steel_impulsive_turkey
+        - /usr/bin/env sh .sqa/script.cinnabar_goofy_penguin.sh
+        container: qc.sec_arctic_devoted_goat
   QC.Sty:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.aqua_generous_spren.sh
-        container: qc.sty_smoke_daring_macaw
+        - /usr/bin/env sh .sqa/script.chartreuse_compassionate_crocodile.sh
+        container: qc.sty_ginger_vibrant_condor
   QC.Uni:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.raspberry_humble_iguana.sh
-        container: qc.uni_mahogany_timid_otter
+        - /usr/bin/env sh .sqa/script.lime_reserved_raccoon.sh
+        container: qc.uni_jasmine_friendly_baboon
   QC.Ver:
     repos:
       gitlab.com/sqaaas/sqaaas-gitlab-ci get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.butter_productive_cassowary.sh
-        container: qc.ver_tundra_fierce_falcon
+        - /usr/bin/env sh .sqa/script.amaranth_optimistic_python.sh
+        container: qc.ver_reef_artistic_rabbit
 timeout: 5400
